@@ -34,11 +34,11 @@ class BBands(strategy.BacktestingStrategy):
 
 
 def main(plot):
-    instrument = "yhoo"
+    instrument = "goog"
     bBandsPeriod = 40
 
     # Download the bars.
-    feed = quandl.build_feed("WIKI", [instrument], 2011, 2012, ".")
+    feed = quandl.build_feed("WIKI", [instrument], 2019, 2020, ".")
 
     strat = BBands(feed, instrument, bBandsPeriod)
     sharpeRatioAnalyzer = sharpe.SharpeRatio()
